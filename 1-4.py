@@ -9,10 +9,10 @@ def twofold(value):
 img = cv2.imread("test.jpg", cv2.IMREAD_GRAYSCALE)
 simg = cv2.resize(img, (800, 600))
 print(simg.shape)
-cv2.imshow("原圖", simg)
+cv2.imshow("Origin", simg)
 for y in range(simg.shape[0]):     # height
     for x in range(simg.shape[1]): # width
         simg[y][x] = (twofold(simg[y][x]))
-cv2.imshow("黑白效果", simg)
+cv2.imshow("B/W", simg)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
